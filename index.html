@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Game Canvas -->
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- HUD Overlay -->
+        <div id="hud">
+            <div class="score-display">
+                <div class="score-item">
+                    <span class="score-label">Score:</span>
+                    <span id="current-score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Distance:</span>
+                    <span id="distance">0m</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">Time:</span>
+                    <span id="time">0s</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay visible">
+            <div class="menu-panel">
+                <h1>🐦 Flappy Bird</h1>
+                <p class="instructions">Tap or hold anywhere to fly!</p>
+                <p class="instructions-detail">Avoid the obstacles and fly as far as you can</p>
+                <button id="start-btn" class="game-btn">Start Game</button>
+                <div class="controls-info">
+                    <p>🖱️ Mouse Click/Hold</p>
+                    <p>⌨️ Spacebar</p>
+                    <p>📱 Touch/Hold</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="overlay">
+            <div class="menu-panel">
+                <h1>Game Over!</h1>
+                <div class="stats">
+                    <div class="stat-row">
+                        <span class="stat-label">Score:</span>
+                        <span id="final-score" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Distance:</span>
+                        <span id="final-distance" class="stat-value">0m</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Time:</span>
+                        <span id="final-time" class="stat-value">0s</span>
+                    </div>
+                    <div class="stat-row highlight">
+                        <span class="stat-label">High Score:</span>
+                        <span id="high-score" class="stat-value">0</span>
+                    </div>
+                </div>
+                <button id="restart-btn" class="game-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
+
